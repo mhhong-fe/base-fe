@@ -1,5 +1,6 @@
 import { start as qiankunStart, registerMicroApps } from 'qiankun';
 
+// fe用来标识这是一个前端应用，settle用来子应用
 export const apps = [
     {
         name: 'settle-fe',
@@ -22,5 +23,6 @@ export default function start() {
             baseUrl: 'fe',
         },
     })));
+    // 不需要预加载
     qiankunStart({ prefetch: false });
 }
