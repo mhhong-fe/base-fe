@@ -1,6 +1,6 @@
 <template>
     <div>
-        主应用Login页面
+        主应用-NotFound
     </div>
 </template>
 
@@ -8,6 +8,4 @@
 
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

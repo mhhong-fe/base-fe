@@ -1,7 +1,6 @@
 <template>
     <div>
-        <h1>结算</h1>
-        <div>{{ centToYuan(1211) }}</div>
+        主应用About页面
     </div>
 </template>
 

@@ -1,11 +1,17 @@
 import { start as qiankunStart, registerMicroApps } from 'qiankun';
 
-const apps = [
+export const apps = [
     {
         name: 'settle-fe',
         entry: 'http://localhost:4000/settle/',
         container: '#container',
         activeRule: ['/fe/settle'],
+    },
+    {
+        name: 'ad-fe',
+        entry: 'http://localhost:4001/ad/',
+        container: '#container',
+        activeRule: ['/fe/ad'],
     },
 ];
 
@@ -16,5 +22,5 @@ export default function start() {
             baseUrl: 'fe',
         },
     })));
-    qiankunStart();
+    qiankunStart({ prefetch: false });
 }

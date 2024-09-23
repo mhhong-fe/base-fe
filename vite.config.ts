@@ -18,7 +18,7 @@ export default defineConfig({
             dts: true,
             vueTemplate: true,
             // 这些目录下的文件会被自动导入
-            dirs: ['./src/composables/**', './src/api/**', './src/utils/**', './src/enums/**'],
+            dirs: ['./src/composables/**', './src/api/**', './src/utils/**', './src/enums/**', './src/components/**'],
             // 解决eslint冲突
             eslintrc: {
                 enabled: true,
@@ -38,10 +38,15 @@ export default defineConfig({
     server: {
         port: 3000,
         proxy: {
-            '/api': {
-                target: 'http://localhost:3000',
+            '/settle': {
+                target: 'http://localhost:4000',
                 changeOrigin: true,
-                rewrite: path => path.replace(/^\/api/, ''), // 可选: 修改路径
+                rewrite: path => path.replace(/^\/settle\/(.*)/, '/settle/$1'), // 可选: 修改路径
+            },
+            '/ad': {
+                target: 'http://localhost:4001',
+                changeOrigin: true,
+                rewrite: path => path.replace(/^\/ad\/(.*)/, '/ad/$1'), // 可选: 修改路径
             },
         },
     },
