@@ -36,18 +36,6 @@ export default defineConfig({
         },
     },
     server: {
-        port: 3000,
-        // proxy: {
-        //     '/settle': {
-        //         target: 'http://localhost:4000',
-        //         changeOrigin: true,
-        //         rewrite: path => path.replace(/^\/settle\/(.*)/, '/settle/$1'), // 可选: 修改路径
-        //     },
-        //     '/ad': {
-        //         target: 'http://localhost:4001',
-        //         changeOrigin: true,
-        //         rewrite: path => path.replace(/^\/ad\/(.*)/, '/ad/$1'), // 可选: 修改路径
-        //     },
-        // },
+        port: 4000,
     },
 });
